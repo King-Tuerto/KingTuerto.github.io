@@ -26,7 +26,7 @@ function checkAccess(event) {
     const entry_date = new Date().toISOString().split('T')[0];
 
     // Send email with EmailJS
-    emailjs.send("service_mejqocb", "template_ar0b48", {
+    emailjs.send("service_mejqocb", "qllgcgb", {
         name: name,
         email: email,
         entry_date: entry_date
