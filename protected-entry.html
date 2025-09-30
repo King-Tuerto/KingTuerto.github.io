@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protected Access - King Tuerto's Treasures</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -12,7 +13,7 @@
             <h1>Protected Strategy Trove</h1>
             <p>Enter your details to unlock. <a href="index.html">Back</a></p>
         </header>
-            <form action="https://formspree.io/f/mnngdvkk" method="POST" onsubmit="return checkAccess()">
+        <form method="POST" onsubmit="return checkAccess()">
             <input type="hidden" name="form-name" value="access-form">
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <input type="email" id="email" name="email" placeholder="Your Email" required>
