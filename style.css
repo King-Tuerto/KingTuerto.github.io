@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Georgia', serif;
-    background-image: url('images/map-background.jpg');
+    background-image: url('map-background.jpg');
     background-size: cover;
     background-attachment: fixed;
     color: #1a1a2e;
@@ -60,8 +60,8 @@ header p {
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: auto;
     margin-bottom: 15px;
 }
 
