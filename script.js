@@ -1,10 +1,10 @@
-// Protected password (change by editing this file in GitHub)
+ // Protected password (change by editing this file in GitHub)
 const PROTECTED_PASSWORD = "in the land of the blind";
 const ADMIN_PASSWORD = "3912";
 
 // On protected entry form submit
 function checkAccess(event) {
-    event.preventDefault(); // Stop default form submit
+    event.preventDefault(); // Stop default form submit to avoid 405 error
     const password = document.getElementById('password').value;
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
