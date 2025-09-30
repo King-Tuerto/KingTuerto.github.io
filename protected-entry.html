@@ -12,12 +12,14 @@
             <h1>Protected Strategy Trove</h1>
             <p>Enter your details to unlock. <a href="index.html">Back</a></p>
         </header>
-        <form onsubmit="return checkAccess()">
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Enter</button>
-        </form>
-        <div id="form-container" style="display:none; margin:50px auto; max-width:400px;">
-            <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div id="password-form">
+            <form onsubmit="return checkAccess(event)">
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Enter</button>
+            </form>
+        </div>
+        <div id="google-form" style="display: none; margin: 50px auto; max-width: 640px;">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfiaePTIHmAJRhB7vxMMoTITfV-RUjFEBkrJ-weIp7NxLu8MQ/viewform?embedded=true" width="640" height="1006" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
         <p><small>Form data stored securely for access tracking.</small></p>
     </div>
