@@ -3,7 +3,8 @@ const PROTECTED_PASSWORD = "in the land of the blind";
 const ADMIN_PASSWORD = "3912";
 
 // On protected entry form submit
-function checkAccess() {
+function checkAccess(event) {
+    event.preventDefault(); // Stop default form submit
     const password = document.getElementById('password').value;
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -18,7 +19,7 @@ function checkAccess() {
         return false;
     }
 
-    // Add hidden date field to form for Netlify
+    // Add hidden date field
     const form = document.querySelector('form');
     const dateInput = document.createElement('input');
     dateInput.type = 'hidden';
@@ -26,7 +27,19 @@ function checkAccess() {
     dateInput.value = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
     form.appendChild(dateInput);
 
-    // Redirect after submit (Netlify handles POST)
+    // Send email with EmailJS
+    emailjs.init("okte9RzHFeBGvliSJ"); // Your Public Key
+    emailjs.send("service_mejqocb", "template_ar0b48", {
+        name: name,
+        email: email,
+        entry_date: dateInput.value
+    }).then(function(response) {
+        console.log('Email sent!', response.status, response.text);
+    }, function(error) {
+        console.log('Email error:', error);
+    });
+
+    // Redirect after submit
     setTimeout(() => {
         window.location.href = 'protected.html';
     }, 1000);
@@ -37,7 +50,7 @@ function checkAccess() {
 function adminCheck() {
     const pass = prompt('Enter admin code:');
     if (pass === ADMIN_PASSWORD) {
-        alert('Admin access granted. Edit script.js to change passwords. View CSVs in Netlify dashboard.');
+        alert('Admin access granted. Edit script.js to change passwords. View emails in your inbox.');
     } else {
         alert('Wrong code.');
     }
