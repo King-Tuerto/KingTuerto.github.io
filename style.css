@@ -23,16 +23,17 @@ header {
 }
 
 h1 {
-    font-size: 3em;
-    color: #d4af37;
+    font-size: 3.9em;
+    color: #b8860b;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Black outline */
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.44em;
     font-style: italic;
     color: #333;
+    font-weight: bold;
 }
 
 .cards {
@@ -135,5 +136,5 @@ button:hover {
 
 @media (max-width: 768px) {
     .cards { grid-template-columns: 1fr; }
-    h1 { font-size: 2em; }
+    h1 { font-size: 2.5em; }
 }
