@@ -7,27 +7,27 @@ function checkAccess(event) {
     const password = document.getElementById('password').value;
 
     if (!password) {
-        alert('Please enter the password.');
+        alert('Please enter the passphrase.');
         return false;
     }
 
     if (password !== PROTECTED_PASSWORD) {
-        alert('Incorrect password. Access denied.');
+        alert('Incorrect passphrase. Access denied.');
         return false;
     }
 
-    // Hide password form and show Google Form
-    document.getElementById('password-form').style.display = 'none';
-    document.getElementById('google-form').style.display = 'block';
-
-    return false; // Don't redirect—let them fill the form
+    // Redirect to protected page
+    setTimeout(() => {
+        window.location.href = 'protected.html';
+    }, 1000);
+    return true;
 }
 
-// For admin page
+// For admin page (if you add it later)
 function adminCheck() {
     const pass = prompt('Enter admin code:');
     if (pass === ADMIN_PASSWORD) {
-        alert('Admin access granted. Edit script.js to change passwords. View registrations in your Google Form responses (paul@tv-mexico.com).');
+        alert('Admin access granted. Edit script.js to change passwords.');
     } else {
         alert('Wrong code.');
     }
