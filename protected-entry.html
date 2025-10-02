@@ -10,18 +10,13 @@
     <div class="container">
         <header>
             <h1>Protected Strategy Trove</h1>
-            <p>Enter your details to unlock. <a href="index.html">Back</a></p>
+            <p>Enter the passphrase to unlock. <a href="index.html">Back</a></p>
         </header>
-        <div id="password-form">
-            <form onsubmit="return checkAccess(event)">
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">Enter</button>
-            </form>
-        </div>
-        <div id="google-form" style="display: none; margin: 50px auto; max-width: 640px;">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfiaePTIHmAJRhB7vxMMoTITfV-RUjFEBkrJ-weIp7NxLu8MQ/viewform?embedded=true" width="640" height="722" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-        <p><small>Form data stored securely for access tracking.</small></p>
+        <form onsubmit="return checkAccess(event)">
+            <input type="password" id="password" placeholder="Passphrase" required>
+            <button type="submit">Enter</button>
+        </form>
+        <p><small>Passphrase: in the land of the blind</small></p>
     </div>
     <script src="script.js"></script>
 </body>
