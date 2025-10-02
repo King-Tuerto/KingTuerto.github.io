@@ -12,7 +12,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(245, 245, 220, 0.6); /* More transparent parchment overlay */
+    background: rgba(245, 245, 220, 0.9); /* Parchment overlay for readability */
     min-height: 100vh;
 }
 
@@ -23,17 +23,16 @@ header {
 }
 
 h1 {
-    font-size: 3.9em;
-    color: #b8860b;
+    font-size: 3em;
+    color: #d4af37;
     margin: 0;
-    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Black outline */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.44em;
+    font-size: 1.2em;
     font-style: italic;
     color: #333;
-    font-weight: bold;
 }
 
 .cards {
@@ -46,16 +45,12 @@ header p {
 .card {
     background: white;
     border-radius: 15px;
-    padding: 30px; /* Increased from 20px to fit extra text */
-    min-height: 250px; /* Added to ensure space for h3, a, p */
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     border: 2px solid transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Evenly space content */
 }
 
 .card:hover {
@@ -65,8 +60,8 @@ header p {
 }
 
 .card img {
-    width: 200px;
-    height: auto;
+    width: 100px;
+    height: 100px;
     margin-bottom: 15px;
 }
 
@@ -75,22 +70,8 @@ header p {
     font-size: 1.5em;
 }
 
-.card h3 {
-    color: #d4af37;
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.card a {
-    color: #d4af37;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
 .card p {
     color: #555;
-    margin-top: auto; /* Pushes p to bottom if needed */
 }
 
 footer {
@@ -154,6 +135,5 @@ button:hover {
 
 @media (max-width: 768px) {
     .cards { grid-template-columns: 1fr; }
-    h1 { font-size: 2.5em; }
-    .card { min-height: 200px; } /* Adjust for mobile */
+    h1 { font-size: 2em; }
 }
