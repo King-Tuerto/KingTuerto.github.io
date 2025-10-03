@@ -12,7 +12,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(245, 245, 220, 0.6); /* More transparent parchment overlay */
+    background: rgba(245, 245, 220, 0.4); /* More transparent parchment overlay */
     min-height: 100vh;
 }
 
